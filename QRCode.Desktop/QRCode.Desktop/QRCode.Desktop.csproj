@@ -106,6 +106,12 @@
     <Compile Include="SubForms\GenerateQRForm.Designer.cs">
       <DependentUpon>GenerateQRForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForms\UploadQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\UploadQR.Designer.cs">
+      <DependentUpon>UploadQR.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="SubForms\GenerateQRForm.resx">
       <DependentUpon>GenerateQRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\UploadQR.resx">
+      <DependentUpon>UploadQR.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

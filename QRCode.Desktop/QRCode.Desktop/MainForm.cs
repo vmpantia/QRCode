@@ -25,5 +25,11 @@ namespace QRCodeReader.Desktop
             var generateQRForm = new GenerateQRForm();
             generateQRForm.ShowDialog();
         }
+
+        private void btnUploadQR_Click(object sender, EventArgs e)
+        {
+            var uploadQRForm = new UploadQR();
+            uploadQRForm.ShowDialog();
+        }
     }
 }

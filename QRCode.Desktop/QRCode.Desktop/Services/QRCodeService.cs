@@ -2,6 +2,7 @@
 using QRCodeReader.Desktop.Common;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,20 @@ namespace QRCodeReader.Desktop.Services
             qr.SaveAsPng(fileName);
 
             return fileName;
+        }
+
+        [Obsolete]
+        public static string ReadQRByImage(Image qr)
+        {
+            if (qr == null)
+                throw new Exception("QR Code cannot be found.");
+
+            BarcodeResult res = BarcodeReader.QuicklyReadOneBarcode((Bitmap)qr);
+            if (res == null)
+            {
+                throw new Exception("Error in reading your QR Code.");
+            }
+            return res.ToString();
         }
 
         private static string GenerateQRCodeName()
